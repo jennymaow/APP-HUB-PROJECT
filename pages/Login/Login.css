@@ -1,0 +1,42 @@
+.inputlogin {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 95vh;
+  gap: 1rem;
+}
+
+.inputlogin > h1 {
+  text-transform: uppercase;
+  font-size: 3rem;
+  font-family: "Press Start 2P";
+  margin-bottom: 3rem;
+}
+
+.inputlogin > h2 {
+  font-weight: 300;
+}
+
+.inputlogin > input {
+  height: 2rem;
+  width: 20rem;
+  background-color: transparent;
+  border-bottom: 1px solid var(--highlight);
+}
+
+.inputlogin > input:focus {
+  outline: none;
+}
+
+.inputlogin > button {
+  text-transform: uppercase;
+  height: 2rem;
+  padding: 0.5rem 2rem 0.5rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  border: 1px solid var(--highlight);
+  font-weight: 700;
+}
