@@ -1,6 +1,7 @@
 import "./Home.css";
 import { printTemplate as PokeapiTemplate } from "../Pokeapi/Pokeapi";
 import { initContent } from "../../main";
+import { printTemplate as PPoTTemplate } from "../PPoT/PPoT";
 const username = localStorage.getItem("user");
 const template = () => `
 <section class="home">
@@ -10,7 +11,7 @@ const template = () => `
     <button class="pokeapiBtn" id="pokeapi">Pokeapi</button>
     <button class="memoryGameBtn">Memory Game</button>
     <button class="quizBtn">Quiz</button>
-    <button class="tresEnRayaBtn">3 en raya</button>
+    <button class="PPoTBtn" id="ppot">PPoT</button>
     </div>
     <button class="logout" id="logout">Logout</button>
 </section>
@@ -24,6 +25,9 @@ const enterGame = (route) =>{
         case "Pokeapi":
             PokeapiTemplate();
         break;
+         case "PPoT":
+            PPoTTemplate();
+        break;
     }
 }
 
@@ -35,16 +39,16 @@ document.querySelector("#logout").addEventListener("click",()=>{
 });
 
 document.querySelector("#pokeapi").addEventListener("click",()=>enterGame("Pokeapi"));
-}
 
+
+document.querySelector("#ppot").addEventListener("click",()=>enterGame("PPoT"));
+}
 
 
 export const printTemplate = () => {
   document.querySelector("#app").innerHTML = template();
   addListeners();
-   /*  document.querySelector(".colortheme").innerHTML += `
-  <button class="logout">Logout</button>
-  `; */
+
 };
 
 enterGame();

@@ -11,14 +11,20 @@
 
 }
 
-.pokeapi > .return {
-    background-color: transparent;
-    border: none;
-    font-family: "Press Start 2P";
-    font-size: 16px;
+
+.pokeapi > .typeFilter {
+    margin: 1rem;
+}
+.pokeapi > .typeFilter > ul{
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     align-items: center;
-    margin: 2rem;
+    gap: 0.5rem;
+}
+
+.pokeapi > .typeFilter > ul > li > button {
+    background-color: transparent;
 }
 
 .pokeapi > .searchPokemon {
@@ -69,6 +75,15 @@
     text-transform: uppercase;
     font-family: "Press Start 2P";
     font-size: 16px;
+}
+
+.pokeapi > div > figure > div {
+    display: flex;
+    gap: 0.5rem;
+}
+.pokeapi > div > figure > div > img{
+    width: 20px;
+    height: 20px;
 }
 
 

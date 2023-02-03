@@ -1,0 +1,9 @@
+.return {
+    background-color: transparent;
+    border: none;
+    font-family: "Press Start 2P";
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    margin: 2rem;
+}

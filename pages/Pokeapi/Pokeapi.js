@@ -1,10 +1,14 @@
 import "./Pokeapi.css";
-import { initContent } from "../../main";
+import { printTypeIcon } from "../../utils/printTypeIcon";
+import { template as typeBtnTemplate } from "../../utils/typeBtns";
+import { returnBtn } from "../../components/returnBtn/returnBtn";
+import { addListener as returnHomeBtn } from "../../components/returnBtn/returnBtn";
 
 const template = () => `
 <section class="pokeapi">
-    <button class="return" id="returnHome">⬅ Return</button>
+    ${returnBtn()}
     <h1>PokeAPI</h1>
+    ${typeBtnTemplate()}
     <div class="searchPokemon">
     <input type="text" id="searchedPokemon" placeholder="Search"/>
     <button class="searchBtn" id="searchBtn">Search</button>
@@ -31,6 +35,7 @@ const mapPokemons = (pokemons) => {
     name: pokemon.name,
     image: pokemon.sprites.front_default,
     id: pokemon.id,
+    types: pokemon.types,
   }));
 
   printPokemon(allPokemons);
@@ -38,15 +43,28 @@ const mapPokemons = (pokemons) => {
 
 const printPokemon = (pokemons) => {
   const container = document.querySelector("#container");
-  container.innerHTML="";
+  container.innerHTML = "";
   for (const pokemon of pokemons) {
     const figure = document.createElement("figure");
-    figure.innerHTML =`
+    figure.classList.add("pokemoncard");
+    figure.innerHTML = `
         <img src=${pokemon.image} alt=${pokemon.name} />
         <h2>${pokemon.name}</h2>
         <p>#${pokemon.id}</p>
         `;
+    const iconsDiv = document.createElement("div");
+    iconsDiv.classList.add(".typeIcons");
+
+    for (const type of pokemon.types) {
+      const typeIcon = document.createElement("img");
+      typeIcon.classList.add("icon");
+      let pokemonType = type.type.name;
+      printTypeIcon(typeIcon, pokemonType);
+      iconsDiv.appendChild(typeIcon);
+    }
+    printTypeIcon(allPokemons);
     container.appendChild(figure);
+    figure.appendChild(iconsDiv);
   }
 };
 
@@ -55,18 +73,28 @@ const filterPokemons = (pokemons) => {
   const filteredPokemons = pokemons.filter((pokemon) =>
     pokemon.name.toLowerCase().includes(myInput.value.toLowerCase())
   );
-
   printPokemon(filteredPokemons);
 };
 
+const filterTypePokemon = (pokemons, pokemonType) => {
+  const filteredTypePokemons = pokemons.filter((pokemon) =>
+    pokemon.types[0].type.name === pokemonType
+  );
+  
+  printPokemon(filteredTypePokemons);
+};
 
 const addListeners = () => {
   document
-    .querySelector("#returnHome")
-    .addEventListener("click", () => initContent("Home"));
-  document
     .querySelector("#searchBtn")
     .addEventListener("click", () => filterPokemons(allPokemons));
+  const allBtns = document.querySelectorAll(".typeBtn");
+  for (const btn of allBtns) {
+    btn.addEventListener("click", (ev) => {
+      filterTypePokemon(allPokemons, ev.target.id);
+    });
+  }
+  returnHomeBtn();
 };
 
 export const printTemplate = () => {

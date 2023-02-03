@@ -13,15 +13,15 @@ const template = () => `
 </section>
 `;
 
-export const addListeners = () =>{
-    const myInput = document.querySelector("#loginInput");
-    document.querySelector("#enter").addEventListener("click", (event)=>{
-        localStorage.setItem("user",myInput.value);
-        HomeTemplate();
-    })
-}
+export const addListeners = () => {
+  const myInput = document.querySelector("#loginInput");
+  document.querySelector("#enter").addEventListener("click", (event) => {
+    localStorage.setItem("user", myInput.value);
+    HomeTemplate();
+  });
+};
 
 export const printTemplate = () => {
-    document.querySelector("#app").innerHTML= template();
-    addListeners();
-}
+  document.querySelector("#app").innerHTML = template();
+  addListeners();
+};
