@@ -2,7 +2,7 @@ import "./PPoT.css";
 import { returnBtn } from "../../components/returnBtn/returnBtn";
 import { addListener as returnHomeBtn } from "../../components/returnBtn/returnBtn";
 import { winner as gameWinner } from "../../utils/winnerPPoT";
-const options = ["piedra", "papel", "tijera"];
+const options = ["bulbasur", "charmander", "squirtle"];
 let player1 = localStorage.getItem("user");
 let player1Choice = "";
 let player2Choice = "";
@@ -13,18 +13,27 @@ ${returnBtn()}
 <p id="winnerPhrase"></p>
 <div class="gamePPoT">
     <div class="player1" id="player1">
-        <h2>Player 1</h2>
-        <h3>${player1}</h3>
+        <div class="player1Info">
+          <h2>Player 1</h2>
+          <h3>${player1}</h3>
+        </div>
         <div class="btnPPoT">
-            <button id="piedra" class="optionPPoT">Piedra</button>
-            <button id="papel" class="optionPPoT">Papel</button>
-            <button id="tijera" class="optionPPoT">Tijera</button>
+            <button id="bulbasur" class="optionPPoT"><img src= "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-v/black-white/animated/1.gif" alt="animated bulbasur"/></button>
+            <button id="charmander" class="optionPPoT"><img src= "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-v/black-white/animated/4.gif" alt="animated charmander"/></button>
+            <button id="squirtle" class="optionPPoT"><img src= "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-v/black-white/animated/7.gif" alt="animated squirtle"/></button>
         </div>
         <figure id="player1Choice"></figure>
     </div>
     <div class="player2" id="player2">
-        <h2>Player 2</h2>
-        <h3>Pikachu</h3>
+        <div class="player2Info">
+          <h2>Player 2</h2>
+          <h3>Pikachu</h3>
+        </div>
+        <div class="btnPlayer2">
+        <button id="bulbasur" ><img src= "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-v/black-white/animated/1.gif" alt="animated bulbasur"/></button>
+        <button id="charmander"><img src= "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-v/black-white/animated/4.gif" alt="animated charmander"/></button>
+        <button id="squirtle"><img src= "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-v/black-white/animated/7.gif" alt="animated squirtle"/></button>
+    </div>
         <figure id="player2Choice"></figure>
     </div>
 </div>

@@ -1,3 +1,93 @@
-.btnPPoT > button{
-    background-color: transparent;
+.PPoT > h1 {
+  font-size: 3rem;
+  font-family: "Press Start 2P";
+  margin: 2rem;
+  padding-bottom: 2rem;
+  align-items: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.PPoT > .gamePPoT {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: 2rem;
+}
+
+/* PLAYER1 */
+
+.PPoT > .gamePPoT > .player1 {
+  display: flex;
+  flex-direction: column;
+
+  gap: 2rem;
+}
+
+.PPoT > .gamePPoT > .player1 > .player1Info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.PPoT > .gamePPoT > .player1 > .btnPPoT {
+  display: flex;
+  flex-direction: column;
+
+  gap: 32px;
+}
+
+.PPoT > .gamePPoT > .player1 > .btnPPoT > button {
+  border: none;
+}
+
+.PPoT > .gamePPoT > .player1 > .btnPPoT > button > img {
+  width: 100px;
+}
+
+/* PLAYER2 */
+
+.PPoT > .gamePPoT > .player2 {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.PPoT > .gamePPoT > .player2 > .player2Info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 1rem;
+}
+
+.PPoT > .gamePPoT > .player2 > .btnPlayer2 {
+  display: flex;
+  flex-direction: column;
+
+  gap: 32px;
+}
+
+.PPoT > .gamePPoT > .player2 > .btnPlayer2 > button {
+  border: none;
+}
+
+.PPoT > .gamePPoT > .player2 > .btnPlayer2 > button > img {
+  width: 100px;
+}
+
+.PPoT > .gamePPoT > .player1 > .player1Info > h2,
+.PPoT > .gamePPoT > .player2 > .player2Info > h2 {
+  font-family: "Press Start 2P";
+}
+
+.PPoT > .gamePPoT > .player1 > .player1Info > h3,
+.PPoT > .gamePPoT > .player2 > .player2Info > h3 {
+  font-family: "Press Start 2P";
+}
+
+.btnPPoT > button,
+.btnPlayer2 > button {
+  background-color: transparent;
 }
