@@ -2,6 +2,9 @@ export const template = () => `
     <div class="typeFilter">
     <ul>
     <li>
+        <button id="all" class="all">All</button>
+    </li>
+    <li>
         <button id="bug" class="typeBtn">Bug</button>
     </li>
     <li>

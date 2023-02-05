@@ -18,8 +18,8 @@ ${returnBtn()}
           <h3>${player1}</h3>
         </div>
         <div class="btnPPoT">
-            <button id="bulbasur" class="optionPPoT"><img src= "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-v/black-white/animated/1.gif" alt="animated bulbasur"/></button>
-            <button id="charmander" class="optionPPoT"><img src= "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-v/black-white/animated/4.gif" alt="animated charmander"/></button>
+            <button id="wartortle" class="optionPPoT"><img src= "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-v/black-white/animated/8.gif" alt="animated bulbasur"/></button>
+            <button id="blastoise" class="optionPPoT"><img src= "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-v/black-white/animated/9.gif" alt="animated charmander"/></button>
             <button id="squirtle" class="optionPPoT"><img src= "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-v/black-white/animated/7.gif" alt="animated squirtle"/></button>
         </div>
         <figure id="player1Choice"></figure>
@@ -30,8 +30,8 @@ ${returnBtn()}
           <h3>Pikachu</h3>
         </div>
         <div class="btnPlayer2">
-        <button id="bulbasur" ><img src= "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-v/black-white/animated/1.gif" alt="animated bulbasur"/></button>
-        <button id="charmander"><img src= "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-v/black-white/animated/4.gif" alt="animated charmander"/></button>
+        <button id="wartortle" ><img src= "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-v/black-white/animated/8.gif" alt="animated bulbasur"/></button>
+        <button id="blastoise"><img src= "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-v/black-white/animated/9.gif"/></button>
         <button id="squirtle"><img src= "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-v/black-white/animated/7.gif" alt="animated squirtle"/></button>
     </div>
         <figure id="player2Choice"></figure>

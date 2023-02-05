@@ -1,90 +1,232 @@
-
-.pokeapi > h1{
-
-    font-size: 3rem;
-    font-family: "Press Start 2P";
-    margin: 2rem;
-    align-items: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
+.pokeapi {
+  margin: 0 10rem;
 }
-
+.pokeapi > h1 {
+  font-size: 3rem;
+  font-family: "Ubuntu";
+  margin: 2rem;
+  align-items: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
 .pokeapi > .typeFilter {
-    margin: 1rem;
+  margin: 1rem;
 }
-.pokeapi > .typeFilter > ul{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    gap: 0.5rem;
+.pokeapi > .typeFilter > ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
 }
 
 .pokeapi > .typeFilter > ul > li > button {
-    background-color: transparent;
+  text-transform: uppercase;
+  height: 2rem;
+  padding: 0.5rem 1.5rem 0.5rem 1.5rem;
+  background-color: white;
+  font-weight: 700;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  border-radius: 5px;
+  border: none;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 1rem;
 }
 
 .pokeapi > .searchPokemon {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 0.5rem;
-
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
 }
-
 
 .pokeapi > .searchPokemon > input {
-
-    width: 200px;
-    height: 30px;
-    color: var(--background-color);
-
+  width: 1000px;
+  height: 30px;
+  color: gray;
+  border: none;
+  background-color: #e7e7e72d;
+  border-bottom: 0.5px solid rgb(5, 5, 5);
+  outline: none;
 }
-
 
 .pokeapi > .searchPokemon > .searchBtn {
-    height: 32px;
-    width: 80px;
-    color: var(--background-color);
-
+  text-transform: uppercase;
+  height: 2rem;
+  padding: 0.5rem 1.5rem 0.5rem 1.5rem;
+  background-color: white;
+  font-weight: 700;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  border-radius: 5px;
+  border: none;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
 }
 
+.pokeapi > .searchPokemon > .searchBtn > img {
+  width: 20px;
+}
 
 .pokeapi > div {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    gap: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+  margin-top: 2rem;
 }
 
-.pokeapi > div > figure {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 200px;
-    height: 300px;
-    gap: 1rem;
+.pokeapi > div > h3 {
+  margin-top: 5rem;
+  font-weight: 400;
+}
+.pokeapi > div > .pokemoncard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 232px;
+  height: 350px;
+  gap: 1rem;
+  box-shadow: 0 8px 15px 0 rgba(46, 50, 114, 0.37);
+  border-radius: 10px;
+}
+
+.pokeapi > div > figure > .pokemonCardEdge {
+  position: absolute;
+  background-color: var(--background-color);
+  /*   
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px; 
+     border-radius: 10px; */
+  height: 222px;
+  width: 230px;
+  z-index: 1;
+  margin-top: 8rem;
+
+  /* background: rgba(255, 255, 255, 0.15); */
+  /* box-shadow: 0 8px 20px 0 rgba(46, 50, 114, 0.37); */
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
 }
 
 .pokeapi > div > figure > h2 {
-    text-transform: uppercase;
-    font-family: "Press Start 2P";
-    font-size: 16px;
+  text-transform: uppercase;
+  font-family: "Ubuntu";
+  font-size: 18px;
+  z-index: 2;
 }
 
+.pokeapi > div > figure > .pokemonImage {
+  width: 150px;
+  z-index: 2;
+ 
+        filter: drop-shadow(5px 5px 5px #666666);
+}
+.pokeapi > div > .pokemoncard > .pokemonDescription {
+  display: flex;
+  align-items: center;
+  gap: 5rem;
+  margin: 0.8rem 0;
+  z-index: 2;
+}
+.pokeapi > div > .pokemoncard > .pokemonDescription > p {
+  width: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2px;
+}
+
+.pokeapi > div > .pokemoncard > .pokemonDescription > p > span {
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 0.8rem;
+}
 .pokeapi > div > figure > div {
-    display: flex;
-    gap: 0.5rem;
-}
-.pokeapi > div > figure > div > img{
-    width: 20px;
-    height: 20px;
+  display: flex;
+  gap: 0.5rem;
 }
 
+.pokeapi > div > figure > div > img {
+  width: 20px;
+  height: 20px;
+  z-index: 2;
+}
 
+.grass {
+  background-color: #63bb5b;
+}
 
+.bug {
+  background-color: #90c12c;
+}
+
+.dark {
+  background-color: #5a5366;
+}
+
+.dragon {
+  background-color: #0a6dc4;
+}
+
+.electric {
+  background-color: #f3d23b;
+}
+
+.fairy {
+  background-color: #ec8fe6;
+}
+
+.fighting {
+  background-color: #ce4069;
+}
+
+.fire {
+  background-color: #ff9c54;
+}
+
+.flying {
+  background-color: #8fa8dd;
+}
+
+.ghost {
+  background-color: #5269ac;
+}
+
+.ground {
+  background-color: #d97746;
+}
+
+.ice {
+  background-color: #74cec0;
+}
+
+.normal {
+  background-color: #9099a1;
+}
+
+.poison {
+  background-color: #ab6ac8;
+}
+
+.psychic {
+  background-color: #f97176;
+}
+
+.rock {
+  background-color: #c7b78b;
+}
+
+.steel {
+  background-color: #5a8ea1;
+}
+
+.water {
+  background-color: #4d90d5;
+}

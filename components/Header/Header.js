@@ -7,7 +7,7 @@ const template = () => `
     </section>
     `;
 
-const changeThemeColor = () => {
+export const changeThemeColor = (item) => {
   document.querySelector("#coloricon").addEventListener("click", () => {
     const randomNumber = (min, max) => {
       min = Math.ceil(min);
@@ -18,11 +18,10 @@ const changeThemeColor = () => {
     let G = randomNumber(0, 255);
     let B = randomNumber(0, 255);
     const color = `rgb(${R},${G},${B})`;
-    document.body.style.backgroundColor = color;
+    item.style.backgroundColor = color;
   });
 };
 
 export const printTemplate = () => {
   document.querySelector("header").innerHTML = template();
-  changeThemeColor();
 };

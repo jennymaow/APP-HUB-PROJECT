@@ -18,5 +18,4 @@ export const initContent = (route) => {
   }
 };
 
-HeaderTemplate();
 initContent();

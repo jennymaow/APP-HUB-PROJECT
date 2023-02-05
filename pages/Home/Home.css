@@ -1,3 +1,29 @@
+
+.colortheme{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    height: 5vh;
+    padding: 0 8rem;
+    gap: 1rem;
+  }
+  
+  .colortheme> button{
+    text-transform: uppercase;
+    height: 2rem;
+    padding: 0.5rem 1.5rem 0.5rem 1.5rem;
+    background-color: white;
+    font-weight: 700;
+    box-shadow: rgba(61, 61, 61, 0.2) 0px 2px 8px 0px;
+    border-radius: 5px;
+    border: none;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 1rem;
+  }
+
+
 .home{
     display: flex;
     flex-direction: column;
@@ -8,10 +34,43 @@
 
 .home>h1{
 
-    font-family: "Press Start 2P";
-    font-size: 3rem;
-    margin-top: 2rem;
+    font-family: "Ubuntu";
+    font-size: 1.5rem;
+    margin-top: 1rem;
 
+}
+
+.home > .profileBack {
+    position: absolute;
+    width: 100%;
+    height: 200px;
+    margin-bottom: 45rem;
+    z-index: -2;
+}
+
+.home > .homeUserAvatarFrame {
+    background: radial-gradient(#ffffff 60%, #cecece);
+    width: 170px;
+    height: 170px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid #fafafa;
+    border-radius: 100px;
+}
+.home >.homeUserAvatarFrame>.homeUserAvatar {
+    width: 120px;
+
+}
+
+.home > .cardEdge {
+    position: absolute;
+   /*  box-shadow: rgba(224, 224, 224, 0.2) 0px -5px 5px 2px; */
+    width: 100%;
+    height: 200px;
+    margin-bottom: 29rem;
+    z-index: -1;
+    background-color: white;
 }
 
 .home> .games {
@@ -19,7 +78,7 @@
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    height: 80vh;
+    height: 62vh;
     gap: 2rem;
 }
 
@@ -29,17 +88,63 @@
     justify-content: center;
     width: 300px;
     height: 200px;
-    font-size: 1.2rem;
-    text-transform: uppercase;
-    font-family: "Press Start 2P";
     border: none;
     border-radius: 10px;
-    background-image: url("https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/2bc72d3c-39ce-45f3-a55c-e0903291ace0/d17dpy4-a8d0b94a-0351-4d9b-9636-33cc1842f0d2.jpg/v1/fill/w_600,h_486,q_75,strp/background_art_for_pokemon_by_orangedroplet_d17dpy4-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NDg2IiwicGF0aCI6IlwvZlwvMmJjNzJkM2MtMzljZS00NWYzLWE1NWMtZTA5MDMyOTFhY2UwXC9kMTdkcHk0LWE4ZDBiOTRhLTAzNTEtNGQ5Yi05NjM2LTMzY2MxODQyZjBkMi5qcGciLCJ3aWR0aCI6Ijw9NjAwIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmltYWdlLm9wZXJhdGlvbnMiXX0.Xa7d7pbU0rU7MNWAomQrAPKjMwYxdB82ALLKMZO_pOs");
+    background-color: var(--background-color);
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    transition: all 0.7s ease-in-out;
+    
+}
+.home > .games > button:hover{
+    transform: scale(1.03);
+}
+
+.home .pokeapiBtn {
+    background-image: url("https://cdn.dribbble.com/users/542624/screenshots/2858767/pokedex.png?compress=1&resize=800x600&vertical=top");
+}
+
+.home .memoryGameBtn {
+    background-image: url("https://cdn.dribbble.com/users/542624/screenshots/2858767/pokedex.png?compress=1&resize=800x600&vertical=top");
+}
+
+.home .quizBtn {
+    background-image: url("https://cdn.dribbble.com/users/542624/screenshots/2858767/pokedex.png?compress=1&resize=800x600&vertical=top");
+}
+
+.home .PPoTBtn {
+    background-image: url("https://cdn.dribbble.com/users/542624/screenshots/2858767/pokedex.png?compress=1&resize=800x600&vertical=top");
+}
+.home .gameName {
+    opacity: 0;
+    font-family: "Ubuntu";
+    font-weight: 500;
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    transition: all 0.2s ease-in-out;
+    color: var(--background-color);
+    padding: 7rem;
+
+}
+
+.home .gameName:hover{
+    opacity: 1;
 }
 
 .logout{
+    text-transform: uppercase;
+    height: 2rem;
+    padding: 0.5rem 2rem 0.5rem 2rem;
     background-color: transparent;
-    font-family: "Press Start 2P";
-    font-size: 1.5rem;
+    font-weight: 700;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    border-radius: 5px;
     border: none;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+.logout img {
+    width: 15px;
 }
