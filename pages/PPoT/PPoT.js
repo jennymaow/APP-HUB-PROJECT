@@ -7,6 +7,7 @@ const options = ["wartortle", "blastoise", "squirtle"];
 let player2Choice = "";
 const template = () => `
 <section class="PPoT" id="PPoT">
+${returnBtn()}
 <div class="insWindow" id="insWindow">
   <div class="insModal" id="insModal">
     <h5 id="ins" class="ins">Pokemon mini battle</h5>
@@ -24,7 +25,7 @@ const template = () => `
     <button class="closeInsModal" id="closeInsModal">Close</button>
   </div>
 </div>    
-${returnBtn()}
+
 <button class="gameInfo" id="gameInfo"><img src="http://pixelartmaker-data-78746291193.nyc3.digitaloceanspaces.com/image/772e07f0ccf593c.png" alt="info icon"/></button>
 <h1>Pokemon mini battle</h1>
 
@@ -91,6 +92,10 @@ const addListeners = () => {
   const insWindow = document.querySelector("#insWindow");
   document.querySelector("#closeInsModal").addEventListener("click", ()=>{
     insWindow.style.display ="none";
+    /* document.body.style.backgroundImage =
+    "url('https://opengameart.org/sites/default/files/Preview_143.png')";
+    document.body.style.backgroundSize = "cover";
+    document.body.style.backgroundSize ="140%" */
   })
  document.querySelector("#gameInfo").addEventListener("click", ()=>{
   insWindow.style.display ="flex";

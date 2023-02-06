@@ -99,16 +99,10 @@
 .pokeapi > div > figure > .pokemonCardEdge {
   position: absolute;
   background-color: var(--background-color);
-  /*   
-    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px; 
-     border-radius: 10px; */
   height: 222px;
   width: 230px;
   z-index: 1;
   margin-top: 8rem;
-
-  /* background: rgba(255, 255, 255, 0.15); */
-  /* box-shadow: 0 8px 20px 0 rgba(46, 50, 114, 0.37); */
   border-radius: 10px;
   border: 1px solid rgba(255, 255, 255, 0.18);
 }
@@ -123,8 +117,8 @@
 .pokeapi > div > figure > .pokemonImage {
   width: 150px;
   z-index: 2;
- 
-        filter: drop-shadow(5px 5px 5px #666666);
+
+  filter: drop-shadow(5px 5px 5px #666666);
 }
 .pokeapi > div > .pokemoncard > .pokemonDescription {
   display: flex;

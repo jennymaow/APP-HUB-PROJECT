@@ -1,11 +1,7 @@
-.quizGame {
-  margin: 0 10rem;
-}
-
 .quizGame > h1 {
   font-size: 3rem;
   font-family: "Ubuntu";
-  margin: 2rem;
+  margin: 2rem 0;
   text-align: center;
 }
 
@@ -17,20 +13,28 @@
 
 .quizGame > .playerProfile {
   display: flex;
+  flex-direction: column;
   align-items: center;
+  justify-content: center;
   gap: 1rem;
-  margin: 2rem 8rem;
+  margin: 2rem;
 }
 
 .quizGame > .playerProfile > p {
   font-size: 0.8rem;
 }
 
-.quizGame > .playerProfile > img {
-  width: 70px;
+.quizGame > .playerProfile div {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.3rem 1.2rem;
+  border: 1.8px solid black;
+  border-radius: 20px;
 }
-.quizGame > .quizContainer {
-  margin: 3rem 0;
+
+.quizGame > .playerProfile img {
+  width: 50px;
 }
 
 .quizGame > .quizContainer > figure {
@@ -38,7 +42,8 @@
   align-items: center;
   justify-content: center;
   gap: 15rem;
-  height: 400px;
+  min-height: 55vh;
+  margin: 3rem 0;
 }
 .quizGame > .quizContainer > figure > img {
   width: 400px;
@@ -48,6 +53,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  flex-wrap: wrap;
   gap: 1rem;
 }
 
@@ -69,6 +75,11 @@
   font-size: 1.1rem;
 }
 
+.quizGame > .quizBtns {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 .quizGame > .quizBtns > .nextQuestion {
   height: 2rem;
   width: 10rem;
@@ -83,7 +94,7 @@
   border: none;
   gap: 0.5rem;
   margin-top: 1rem;
-  margin-left: 43rem;
+  margin-bottom: 1rem;
 }
 
 .quizGame > .quizBtns > .quizResult {
@@ -100,23 +111,22 @@
   border: none;
   gap: 0.5rem;
   margin-top: 1rem;
-  margin-left: 45rem;
 }
 
-.quizGame >.modalWindow{
-    display: none;
-    justify-content: center;
-    align-items: center;
-    z-index: 1;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0,0,0,0.5);
+.quizGame > .modalWindow {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
-.quizGame > .modalWindow> .resultModal {
+.quizGame > .modalWindow > .resultModal {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -126,30 +136,79 @@
   height: 400px;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   border-radius: 10px;
-  position: relative;
-  left: 38rem;
-  top: 17rem;
-  
 }
-.quizGame > .modalWindow> .resultModal > .message {
+.quizGame > .modalWindow > .resultModal > .message {
   display: flex;
   align-items: center;
   justify-content: space-around;
   margin-bottom: 3rem;
-  gap: 3rem
+  gap: 3rem;
 }
 
-.quizGame > .modalWindow> .resultModal > .message > h5 {
+.quizGame > .modalWindow > .resultModal > .message > h5 {
   font-size: 2rem;
   width: 300px;
 }
 
-.quizGame > .modalWindow> .resultModal > .closeResultModal {
-    
-    width: 80px;
-    height: 2rem;
-    border-radius: 5px;
-    border: none;
-    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+.quizGame > .modalWindow > .resultModal > .closeResultModal {
+  width: 80px;
+  height: 2rem;
+  border-radius: 5px;
+  border: none;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
 
+@media screen and (max-width: 1060px) {
+  .quizGame > h1 {
+    font-size: 2.5em;
+    margin: 1rem 0 1rem 0;
+  }
+  .quizGame > h2 {
+    font-size: 1rem;
+  }
+  .quizGame > .playerProfile {
+    margin: 1.2rem 0 1rem 0;
+  }
+
+  .quizGame > .playerProfile div {
+    border: 1px solid rgb(39, 39, 39);
+  }
+  .quizGame > .quizContainer > figure {
+    gap: 1rem;
+    min-height: 60vh;
+    margin: 0 0 1rem 0;
+    flex-direction: column;
+  }
+
+  .quizGame > .quizContainer > figure > img {
+    width: 200px;
+  }
+  .quizGame > .quizContainer > figure > .QandA {
+    order: 1;
+  }
+  .quizGame > .quizContainer > figure > .QandA > h3 {
+    font-size: 1.1rem;
+  }
+
+  .quizGame > .modalWindow > .resultModal {
+    width: 300px;
+    height: 500px;
+    left: 0.2rem;
+    top: 1rem;
+  }
+  .quizGame > .modalWindow > .resultModal > .message {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .quizGame > .modalWindow > .resultModal > .message > h5 {
+    font-size: 1.2rem;
+    width: 250px;
+    text-align: center;
+  }
+
+  .quizGame > .modalWindow > .resultModal > .message > img{
+    width: 220px;
+  }
 }

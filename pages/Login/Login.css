@@ -23,6 +23,7 @@
   margin-top: 2rem;
   width: 442px;
 }
+
 .inputlogin > .chooseAvatar > button {
   background-color: transparent;
   width: 80px;
@@ -40,7 +41,7 @@
 
 .inputlogin > .chooseAvatar > .avatarContainer {
   width: 250px;
-  height: 250px;
+  aspect-ratio: 1/1;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -100,5 +101,9 @@
   }
   .inputlogin > .chooseAvatar{
     width: 300px;
+  }
+
+  .inputlogin  .chooseAvatar  .playerAvatar{
+    width: 100px;
   }
 }

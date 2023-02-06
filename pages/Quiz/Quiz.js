@@ -7,15 +7,17 @@ let actualQuestionIndex = 0;
 let actualQuestionId = "";
 let correctAnswer = "";
 let correctCounter = 0;
-const template = () => `
+const template = () => ` ${returnBtn()}
 <section class="quizGame">
-    ${returnBtn()}
+   
     <h1>Pokemon Quiz</h1>
     <h2>Are you a qualified Pokemon trainer?</h2>
 
     <div class="playerProfile" id="playerProfile">
+        <div>
         <img src=${localStorage.getItem("icon")} alt="player avatar"/>
         <h4>${localStorage.getItem("user")}</h4>
+        </div>
         <p id="numCorrectAnswers">Correct answers: ${(correctCounter = 0)}</p>
     </div>
 
@@ -143,7 +145,7 @@ const addListenersNext = () => {
     const trainerLevel = document.querySelector("#trainerLevel");
     const trainerLevelImg = document.querySelector("#trainerLevelImg");
     quizMasterLevel(trainerLevel, trainerLevelImg, correctCounter);
-    modalWindow.style.display = "block";
+    modalWindow.style.display = "flex";
   });
 
   closeResultBtn.addEventListener("click", () => {

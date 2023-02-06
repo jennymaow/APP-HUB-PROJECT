@@ -58,10 +58,7 @@ const addListeners = () => {
 
   document.querySelector("#ppot").addEventListener("click", () => {
     enterGame("PPoT");
-    document.body.style.backgroundImage =
-      "url('https://opengameart.org/sites/default/files/Preview_143.png')";
-      document.body.style.backgroundSize = "cover";
-      document.body.style.backgroundSize ="140%"
+
   });
 
   document
