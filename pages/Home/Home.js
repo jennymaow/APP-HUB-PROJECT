@@ -3,7 +3,8 @@ import { printTemplate as PokeapiTemplate } from "../Pokeapi/Pokeapi";
 import { initContent } from "../../main";
 import { printTemplate as PPoTTemplate } from "../PPoT/PPoT";
 import { changeColor } from "../../utils/changeColor";
-
+import { printTemplate as MemoryTemplate } from "../Memory/Memory";
+import { printTemplate as QuizTemplate } from "../Quiz/Quiz";
 
 const username = localStorage.getItem("user");
 const avatar = localStorage.getItem("icon");
@@ -19,18 +20,13 @@ const template = () => `
     <div class="games">
     <button class="pokeapiBtn" id="pokeapi"><p class="gameName">Pokédex</p></button>
     <button class="memoryGameBtn"><p class="gameName">Memory Game</p></button>
-    <button class="quizBtn"><p class="gameName">Quiz</p></button>
+    <button class="quizBtn" id="quizBtn"><p class="gameName">Pokemon Quiz</p></button>
     <button class="PPoTBtn" id="ppot"><p class="gameName">PPoT</p></button>
     </div>
     <button class="logout" id="logout"><img src="https://res.cloudinary.com/dnb4ujbgr/image/upload/v1675539928/Pokemons%20icons/logout_exit_icon_176185_y75enu.png" alt= "logout icon"/>Log out</button>
 </section>
 `;
 
-
-const allGameNames = document.querySelectorAll(".gameName");
-for (const name of allGameNames) {
-  name.classList.add("slide-in-top");
-}
 
 const enterGame = (route) => {
   switch (route) {
@@ -43,28 +39,39 @@ const enterGame = (route) => {
     case "PPoT":
       PPoTTemplate();
       break;
+    case "QuizGame":
+      QuizTemplate();
+      break;
+      case "MemoryGame":
+        MemoryTemplate();
+        break;
   }
 };
 
 const addListeners = () => {
   document.querySelector("#logout").addEventListener("click", () => {
     localStorage.clear();
-
     initContent("Login");
+  });
+
+  document.querySelector("#coloricon").addEventListener("click", () => {
+    const profileBack = document.querySelector("#profileBack");
+    profileBack.style.backgroundColor = changeColor();
   });
 
   document
     .querySelector("#pokeapi")
     .addEventListener("click", () => enterGame("Pokeapi"));
 
-  document
-    .querySelector("#ppot")
-    .addEventListener("click", () => enterGame("PPoT"));
-
-  document.querySelector("#coloricon").addEventListener("click", () => {
-    const profileBack = document.querySelector("#profileBack");
-    profileBack.style.backgroundColor = changeColor();
+  document.querySelector("#ppot").addEventListener("click", () => {
+    enterGame("PPoT");
+    document.body.style.backgroundImage =
+      "url('https://opengameart.org/sites/default/files/Preview_143.png')";
   });
+
+  document
+    .querySelector("#quizBtn")
+    .addEventListener("click", () => enterGame("QuizGame"));
 };
 
 export const printTemplate = () => {

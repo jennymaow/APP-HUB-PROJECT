@@ -1,0 +1,87 @@
+.quizGame {
+  margin: 0 10rem;
+}
+
+.quizGame > h1 {
+  font-size: 3rem;
+  font-family: "Ubuntu";
+  margin: 2rem;
+  text-align: center;
+}
+
+.quizGame > h2 {
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.quizGame > .playerProfile {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin: 2rem 8rem;
+}
+
+.quizGame > .playerProfile >p{
+    font-size: 0.8rem;
+}
+
+.quizGame > .playerProfile > img {
+  width: 70px;
+}
+.quizGame > .quizContainer {
+  margin: 3rem 0;
+}
+
+.quizGame > .quizContainer > figure {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15rem;
+}
+.quizGame > .quizContainer > figure > img {
+  width: 400px;
+}
+
+.quizGame > .quizContainer > figure > .QandA {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.quizGame > .quizContainer > figure > .QandA > button {
+  height: 3rem;
+  width: 15rem;
+  display: flex;
+  justify-content: center;
+  padding: 0.5rem 1.5rem 0.5rem 1.5rem;
+  background-color: white;
+  font-weight: 700;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  border-radius: 5px;
+  border: none;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 1rem;
+  font-size: 1.1rem;
+}
+
+.quizGame > .nextQuestion {
+  height: 2rem;
+  width: 10rem;
+  display: flex;
+  justify-content: center;
+  padding: 0.5rem 1.5rem 0.5rem 1.5rem;
+  background-color: white;
+  font-weight: 700;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  border-radius: 5px;
+  border: none;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 1rem;
+  margin-left: 45rem;
+}
