@@ -244,8 +244,9 @@
 
 @media screen and (max-width: 960px){
   .PPoT > h1 {
-    font-size: 2.6rem;
+    font-size: 2.5rem;
     padding-bottom: 1rem;
+    text-shadow: 3px 3px 2px black;
     text-align: center;
     -webkit-text-stroke: 0;
     
