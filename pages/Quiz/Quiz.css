@@ -160,7 +160,7 @@
 
 @media screen and (max-width: 1060px) {
   .quizGame > h1 {
-    font-size: 2.5em;
+    font-size: 2.5rem;
     margin: 1rem 0 1rem 0;
   }
   .quizGame > h2 {
