@@ -22,8 +22,8 @@
   margin: 2rem 8rem;
 }
 
-.quizGame > .playerProfile >p{
-    font-size: 0.8rem;
+.quizGame > .playerProfile > p {
+  font-size: 0.8rem;
 }
 
 .quizGame > .playerProfile > img {
@@ -38,6 +38,7 @@
   align-items: center;
   justify-content: center;
   gap: 15rem;
+  height: 400px;
 }
 .quizGame > .quizContainer > figure > img {
   width: 400px;
@@ -68,20 +69,87 @@
   font-size: 1.1rem;
 }
 
-.quizGame > .nextQuestion {
+.quizGame > .quizBtns > .nextQuestion {
   height: 2rem;
   width: 10rem;
   display: flex;
   justify-content: center;
+  align-items: center;
   padding: 0.5rem 1.5rem 0.5rem 1.5rem;
   background-color: white;
   font-weight: 700;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   border-radius: 5px;
   border: none;
-  display: flex;
+  gap: 0.5rem;
+  margin-top: 1rem;
+  margin-left: 43rem;
+}
+
+.quizGame > .quizBtns > .quizResult {
+  display: none;
+  height: 2rem;
+  width: 10rem;
+  justify-content: center;
   align-items: center;
+  padding: 0.5rem 1.5rem 0.5rem 1.5rem;
+  background-color: white;
+  font-weight: 700;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  border-radius: 5px;
+  border: none;
   gap: 0.5rem;
   margin-top: 1rem;
   margin-left: 45rem;
+}
+
+.quizGame >.modalWindow{
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+}
+
+.quizGame > .modalWindow> .resultModal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  width: 700px;
+  height: 400px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  border-radius: 10px;
+  position: relative;
+  left: 38rem;
+  top: 17rem;
+  
+}
+.quizGame > .modalWindow> .resultModal > .message {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-bottom: 3rem;
+  gap: 3rem
+}
+
+.quizGame > .modalWindow> .resultModal > .message > h5 {
+  font-size: 2rem;
+  width: 300px;
+}
+
+.quizGame > .modalWindow> .resultModal > .closeResultModal {
+    
+    width: 80px;
+    height: 2rem;
+    border-radius: 5px;
+    border: none;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+
 }

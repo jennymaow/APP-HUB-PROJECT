@@ -21,16 +21,18 @@ let pokemonsList = [];
 let allPokemons = [];
 
 const getPokemons = async () => {
+  pokemonsList=[];
   for (let i = 1; i < 151; i++) {
     const res = await fetch(`https://pokeapi.co/api/v2/pokemon/${i}`);
     const json = await res.json();
     pokemonsList.push(json);
   }
-
+  
   mapPokemons(pokemonsList);
 };
 
 const mapPokemons = (pokemons) => {
+  allPokemons=[];
   allPokemons = pokemons.map((pokemon) => ({
     name: pokemon.name,
     image: pokemon.sprites.other.home.front_default,

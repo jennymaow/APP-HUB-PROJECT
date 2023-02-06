@@ -69,7 +69,7 @@ export const quizQuestions = [
       ],
       correctAnswer:"Charizard",
     image:
-      "https://www.google.com/url?sa=i&url=https%3A%2F%2Famgrubb.github.io%2Fcsc111%2Fhomework-9-poke.html&psig=AOvVaw0Qt9cvLJbGFQySNHRlLmSy&ust=1675704838918000&source=images&cd=vfe&ved=0CBAQjRxqFwoTCOCRpY_1_vwCFQAAAAAdAAAAABAP",
+      "https://amgrubb.github.io/csc111/img/pokemon.png",
   },
 
   {

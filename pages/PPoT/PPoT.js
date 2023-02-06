@@ -4,22 +4,37 @@ import { addListener as returnHomeBtn } from "../../components/returnBtn/returnB
 import { winner as gameWinner } from "../../utils/winnerPPoT";
 import { asignGIF } from "../../utils/asignBattleGIF";
 const options = ["wartortle", "blastoise", "squirtle"];
-let player1 = localStorage.getItem("user");
-let avatar1= localStorage.getItem("icon");
-let player1Choice = "";
 let player2Choice = "";
 const template = () => `
 <section class="PPoT" id="PPoT">
+<div class="insWindow" id="insWindow">
+  <div class="insModal" id="insModal">
+    <h5 id="ins" class="ins">Pokemon mini battle</h5>
+    <h6>Choose a Pokemon and play against Pikachu</h6>
+    <div class="insImage">
+        <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-v/black-white/animated/7.gif" alt="squirtle GIF"/>
+        <img class="biggerThan" src="https://static.thenounproject.com/png/801787-200.png" alt="bigger than icon"/>
+          <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-v/black-white/animated/9.gif" alt="blastoise avatar"/>
+          <img class="biggerThan" src="https://static.thenounproject.com/png/801787-200.png" alt="bigger than icon"/>
+          <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-v/black-white/animated/8.gif" alt="wartortle avatar"/>
+          <img class="biggerThan"  src="https://static.thenounproject.com/png/801787-200.png" alt="bigger than icon"/>
+          <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-v/black-white/animated/7.gif" alt="squirtle GIF"/>
+           
+    </div>
+    <button class="closeInsModal" id="closeInsModal">Close</button>
+  </div>
+</div>    
 ${returnBtn()}
+<button class="gameInfo" id="gameInfo"><img src="http://pixelartmaker-data-78746291193.nyc3.digitaloceanspaces.com/image/772e07f0ccf593c.png" alt="info icon"/></button>
 <h1>Pokemon mini battle</h1>
 
 <div class="gamePPoT">
     <div class="player1" id="player1">
         <div class="player1Info">
-          <img src=${avatar1} alt="avatar player 1"/>
+          <img src=${localStorage.getItem("icon")} alt="avatar player 1"/>
           <div class="P1">
           <h2>PLAYER 1</h2>
-          <h3>${player1}</h3>
+          <h3>${localStorage.getItem("user")}</h3>
           </div>
         </div>
         <div class="gameP1">
@@ -57,7 +72,6 @@ ${returnBtn()}
 
 const printPlayer1Choice = (choice) => {
   const player1ChoiceGIF = document.querySelector("#player1ChoiceGIF");
-  player1Choice = choice;
   asignGIF(choice,player1ChoiceGIF);
 };
 
@@ -74,6 +88,13 @@ const randomPlayer2Choice = (optionList) => {
 
 const addListeners = () => {
   returnHomeBtn();
+  const insWindow = document.querySelector("#insWindow");
+  document.querySelector("#closeInsModal").addEventListener("click", ()=>{
+    insWindow.style.display ="none";
+  })
+ document.querySelector("#gameInfo").addEventListener("click", ()=>{
+  insWindow.style.display ="flex";
+ });
 
   const optionBtns = document.querySelectorAll(".optionPPoT");
   for (const btn of optionBtns) {
@@ -84,7 +105,7 @@ const addListeners = () => {
       printPlayer1Choice(btn.id);
       const PPoT = document.querySelector("#PPoT");
       const winnerPhrase = document.querySelector("#winnerPhrase");
-      gameWinner(btn.id, player2Choice, player1);
+      gameWinner(btn.id, player2Choice, localStorage.getItem("user"));
       PPoT.appendChild(winnerPhrase);
     });
   }

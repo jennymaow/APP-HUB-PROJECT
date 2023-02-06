@@ -9,7 +9,6 @@ export const changeColor = () => {
       let G = randomNumber(0, 255);
       let B = randomNumber(0, 255);
       const color = `rgb(${R},${G},${B})`;
-      console.log (color);
       return color;
    
   };
