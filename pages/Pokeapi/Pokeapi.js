@@ -7,7 +7,7 @@ import { addColorClass } from "../../utils/addColorClass";
 const template = () => `
 <section class="pokeapi">
     ${returnBtn()}
-    <h1>Pokedex</h1>
+    <h1>${localStorage.getItem("user")}'s Pokedex</h1>
     ${typeBtnTemplate()}
     <div class="searchPokemon">
     <input type="text" id="searchedPokemon" placeholder="  Search Pokemon"/>
@@ -21,18 +21,18 @@ let pokemonsList = [];
 let allPokemons = [];
 
 const getPokemons = async () => {
-  pokemonsList=[];
+  pokemonsList = [];
   for (let i = 1; i < 151; i++) {
     const res = await fetch(`https://pokeapi.co/api/v2/pokemon/${i}`);
     const json = await res.json();
     pokemonsList.push(json);
   }
-  
+
   mapPokemons(pokemonsList);
 };
 
 const mapPokemons = (pokemons) => {
-  allPokemons=[];
+  allPokemons = [];
   allPokemons = pokemons.map((pokemon) => ({
     name: pokemon.name,
     image: pokemon.sprites.other.home.front_default,
@@ -56,18 +56,18 @@ const printPokemon = (pokemons) => {
         <img src=${pokemon.image} alt=${pokemon.name} class="pokemonImage" />
         <h2>${pokemon.name} #${pokemon.id}</h2>
         <div class="pokemonDescription">
-        <p class="height"> <span>Height</span> ${pokemon.height/10}m</p>
-        <p class="weight"><span> Weight</span> ${pokemon.weight/10}kg</p>
+        <p class="height"> <span>Height</span> ${pokemon.height / 10}m</p>
+        <p class="weight"><span> Weight</span> ${pokemon.weight / 10}kg</p>
         </div>
         `;
     const iconsDiv = document.createElement("div");
     iconsDiv.classList.add(".typeIcons");
-   
-   addColorClass(figure,pokemon.types[0].type.name);
+
+    addColorClass(figure, pokemon.types[0].type.name);
 
     for (const type of pokemon.types) {
       const typeIcon = document.createElement("img");
-      
+
       typeIcon.classList.add("icon");
       let pokemonType = type.type.name;
       printTypeIcon(typeIcon, pokemonType);
@@ -79,18 +79,15 @@ const printPokemon = (pokemons) => {
   }
 };
 
-const typeColor = (pokemons) =>{
-  
-  for (const pokemon of pokemons){
+const typeColor = (pokemons) => {
+  for (const pokemon of pokemons) {
     const pokemonBack = document.querySelector("#pokemonBack");
-    console.log (pokemon.types[0].type.name);
+    console.log(pokemon.types[0].type.name);
     pokemonBack.classList.add(`"${pokemon.types[0].type.name}"`);
   }
-}
+};
 
-typeColor (allPokemons);
-
-
+typeColor(allPokemons);
 
 const filterPokemons = (pokemons) => {
   const myInput = document.querySelector("#searchedPokemon");
@@ -101,29 +98,27 @@ const filterPokemons = (pokemons) => {
 };
 
 const filterTypePokemon = (pokemons, pokemonType) => {
-  const filteredTypePokemons = pokemons.filter((pokemon) =>
-    pokemon.types[0].type.name === pokemonType
+  const filteredTypePokemons = pokemons.filter(
+    (pokemon) => pokemon.types[0].type.name === pokemonType
   );
 
-  if(filteredTypePokemons.length>0){
+  if (filteredTypePokemons.length > 0) {
     printPokemon(filteredTypePokemons);
-  } else{
-    
+  } else {
     const noPokemon = document.createElement("h3");
     const container = document.querySelector("#container");
-    container.innerHTML="";
+    container.innerHTML = "";
     noPokemon.textContent = "No results";
     container.appendChild(noPokemon);
   }
-  
-  
 };
 
 const addListeners = () => {
+ 
   document
     .querySelector("#searchBtn")
     .addEventListener("click", () => filterPokemons(allPokemons));
-    document
+  document
     .querySelector("#all")
     .addEventListener("click", () => printPokemon(allPokemons));
   const allBtns = document.querySelectorAll(".typeBtn");

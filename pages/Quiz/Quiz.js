@@ -7,7 +7,8 @@ let actualQuestionIndex = 0;
 let actualQuestionId = "";
 let correctAnswer = "";
 let correctCounter = 0;
-const template = () => ` ${returnBtn()}
+const template = () => ` 
+${returnBtn()}
 <section class="quizGame">
    
     <h1>Pokemon Quiz</h1>

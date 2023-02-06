@@ -10,6 +10,7 @@ export const addListener = () => {
     initContent("Home");
     const profileBack = document.querySelector("#profileBack");
     profileBack.style.backgroundColor = changeColor();
-    document.body.style.backgroundImage ="white";
+    document.body.style.backgroundColor ="white";
+    addListener();
   });
 };

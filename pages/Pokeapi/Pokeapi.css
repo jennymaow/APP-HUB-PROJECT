@@ -2,6 +2,7 @@
   width: 70%;
   margin: 0 auto;
 }
+
 .pokeapi > h1 {
   font-size: 3rem;
   font-family: "Ubuntu";
@@ -9,11 +10,11 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  text-align: center;
 }
 
 .pokeapi > .typeFilter {
   width: 100%;
-  
 }
 .pokeapi > .typeFilter > ul {
   display: flex;
@@ -21,7 +22,6 @@
   justify-content: center;
   align-items: center;
   gap: 0.5rem;
-  
 }
 
 .pokeapi > .typeFilter > ul > li > button {
@@ -239,22 +239,20 @@
   .pokeapi > .searchPokemon > input {
     width: 20rem;
   }
-  .pokeapi > .typeFilter > ul > li > button{
+  .pokeapi > .typeFilter > ul > li > button {
     font-size: 0.7rem;
     padding: 0.5rem 0.5rem 0.5rem 0.5rem;
   }
-
 }
 
-@media screen and (max-width: 570px){
-  .pokeapi > h1{
+@media screen and (max-width: 570px) {
+  .pokeapi > h1 {
     font-size: 2.5rem;
   }
   .pokeapi > .searchPokemon > input {
     width: 10rem;
   }
-  .pokeapi > .typeFilter > ul > li > button{
+  .pokeapi > .typeFilter > ul > li > button {
     margin-top: 0.5rem;
   }
 }
-

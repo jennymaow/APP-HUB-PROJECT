@@ -92,10 +92,6 @@ const addListeners = () => {
   const insWindow = document.querySelector("#insWindow");
   document.querySelector("#closeInsModal").addEventListener("click", ()=>{
     insWindow.style.display ="none";
-    /* document.body.style.backgroundImage =
-    "url('https://opengameart.org/sites/default/files/Preview_143.png')";
-    document.body.style.backgroundSize = "cover";
-    document.body.style.backgroundSize ="140%" */
   })
  document.querySelector("#gameInfo").addEventListener("click", ()=>{
   insWindow.style.display ="flex";
@@ -103,7 +99,7 @@ const addListeners = () => {
 
   const optionBtns = document.querySelectorAll(".optionPPoT");
   for (const btn of optionBtns) {
-    btn.addEventListener("click", (ev) => {
+    btn.addEventListener("click", () => {
       const player2ChoiceGIF = document.querySelector("#player2ChoiceGIF");
       player2ChoiceGIF.src="";
       randomPlayer2Choice(options);
