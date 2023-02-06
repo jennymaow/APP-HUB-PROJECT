@@ -13,11 +13,12 @@ const template = () => `
     <figure class="profileBack" id="profileBack"></figure>
     <figure class="homeUserAvatarFrame"><img class="homeUserAvatar" src=${localStorage.getItem("icon")} alt="user avatar"/></figure>
     <h1>Hello, trainer ${localStorage.getItem("user")}</h1>
-    <div class="cardEdge"></div>
+    
     <div class="games">
-    <button class="pokeapiBtn" id="pokeapi"><p class="gameName">Pokédex</p></button>
-    <button class="quizBtn" id="quizBtn"><p class="gameName">Pokemon Quiz</p></button>
-    <button class="PPoTBtn" id="ppot"><p class="gameName">PPoT</p></button>
+    <button class="pokeapiBtn" id="pokeapi"></button>
+    <button class="quizBtn" id="quizBtn"></button>
+    <button class="PPoTBtn" id="ppot"></button>
+    
     </div>
     <button class="logout" id="logout"><img src="https://res.cloudinary.com/dnb4ujbgr/image/upload/v1675539928/Pokemons%20icons/logout_exit_icon_176185_y75enu.png" alt= "logout icon"/>Log out</button>
 </section>

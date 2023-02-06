@@ -5,20 +5,23 @@
   align-items: center;
   height: 95vh;
   gap: 1rem;
+  width: 99vw;
 }
 
 .inputlogin > h1 {
   text-transform: uppercase;
-  font-size: 3rem;
+  font-size: 2rem;
   font-family: "Ubuntu";
   font-weight: 700;
-  margin-bottom: 3rem;
+  margin: 2rem 0 1rem 0;
 }
 
 .inputlogin > .chooseAvatar{
   display: flex;
   align-items: center;
   gap: 1rem;
+  margin-top: 2rem;
+  width: 442px;
 }
 .inputlogin > .chooseAvatar > button {
   background-color: transparent;
@@ -58,7 +61,7 @@
   background-color: transparent;
   border: none;
   border-bottom: 1px solid gray;
-  
+  margin-bottom: 2rem;
 }
 
 .inputlogin > input:focus {
@@ -77,7 +80,6 @@
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   border-radius: 5px;
   border: none;
-  margin-top: 1rem;
 }
 
 .inputlogin > .randomAvatar {
@@ -89,4 +91,14 @@
 
 .inputlogin > .randomAvatar > img {
   width: 50px;
+}
+
+
+@media screen and (max-width: 576px) {
+  .inputlogin > h1{
+    font-size: 1.8rem;
+  }
+  .inputlogin > .chooseAvatar{
+    width: 300px;
+  }
 }
