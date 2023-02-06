@@ -111,6 +111,7 @@
   border: none;
   gap: 0.5rem;
   margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 
 .quizGame > .modalWindow {
@@ -185,9 +186,14 @@
   }
   .quizGame > .quizContainer > figure > .QandA {
     order: 1;
+    gap: 0.5rem;
   }
   .quizGame > .quizContainer > figure > .QandA > h3 {
     font-size: 1.1rem;
+  }
+  .quizGame > .quizContainer > figure > .QandA > button {
+    font-size: 12px;
+    padding: 0.2rem 1.2rem 0.2rem 1.2rem;
   }
 
   .quizGame > .modalWindow > .resultModal {
@@ -208,7 +214,7 @@
     text-align: center;
   }
 
-  .quizGame > .modalWindow > .resultModal > .message > img{
+  .quizGame > .modalWindow > .resultModal > .message > img {
     width: 220px;
   }
 }

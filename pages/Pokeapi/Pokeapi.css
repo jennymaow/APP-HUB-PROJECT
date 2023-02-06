@@ -253,5 +253,8 @@
   .pokeapi > .searchPokemon > input {
     width: 10rem;
   }
+  .pokeapi > .typeFilter > ul > li > button{
+    margin-top: 0.5rem;
+  }
 }
 
