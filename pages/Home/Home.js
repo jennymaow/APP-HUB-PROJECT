@@ -61,7 +61,7 @@ const addListeners = () => {
 
   document.querySelector("#ppot").addEventListener("click", () => {
     enterGame("PPoT");
-    document.body.style.backgroundColor = "#2BC0E4";
+    document.body.style.backgroundColor = "#6ba4e5";
   });
 
   document
