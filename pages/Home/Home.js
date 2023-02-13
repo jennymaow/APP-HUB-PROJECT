@@ -11,7 +11,9 @@ const template = () => `
 </section>
 <section class="home">
     <figure class="profileBack" id="profileBack"></figure>
-    <figure class="homeUserAvatarFrame"><img class="homeUserAvatar" src=${localStorage.getItem("icon")} alt="user avatar"/></figure>
+    <figure class="homeUserAvatarFrame"><img class="homeUserAvatar" src=${localStorage.getItem(
+      "icon"
+    )} alt="user avatar"/></figure>
     <h1>Hello, trainer ${localStorage.getItem("user")}</h1>
     
     <div class="games">
@@ -46,10 +48,11 @@ const addListeners = () => {
     localStorage.clear();
     initContent();
   });
-
+  const profileBack = document.querySelector("#profileBack");
+  profileBack.style.backgroundColor = changeColor();
   document.querySelector("#coloricon").addEventListener("click", () => {
-    const profileBack = document.querySelector("#profileBack");
-    profileBack.style.backgroundColor = changeColor();
+    localStorage.setItem("color theme", changeColor());
+    profileBack.style.backgroundColor = localStorage.getItem("color theme");
   });
 
   document
@@ -58,8 +61,7 @@ const addListeners = () => {
 
   document.querySelector("#ppot").addEventListener("click", () => {
     enterGame("PPoT");
-    document.body.style.backgroundColor ="#2BC0E4";
-
+    document.body.style.backgroundColor = "#2BC0E4";
   });
 
   document

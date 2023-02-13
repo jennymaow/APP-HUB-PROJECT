@@ -9,8 +9,8 @@ export const addListener = () => {
   document.querySelector("#returnHome").addEventListener("click", () => {
     initContent("Home");
     const profileBack = document.querySelector("#profileBack");
-    profileBack.style.backgroundColor = changeColor();
-    document.body.style.backgroundColor ="white";
+    profileBack.style.backgroundColor = localStorage.getItem("color theme");
+    document.body.style.backgroundColor = "white";
     addListener();
   });
 };

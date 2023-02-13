@@ -16,8 +16,7 @@ const template = () => `
     </div>
 
     <button id="randomAvatar" class="randomAvatar"><img src="https://res.cloudinary.com/dnb4ujbgr/image/upload/v1675534264/Pokemons%20icons/play_dice_gambling_game_luck_icon_225835_mnlerb.png" alt="random dice icon"/></button>
-
-    <input type="text" id="loginInput" placeholder=" Introduce your name" />
+    <input type="text" id="loginInput" placeholder=" Enter your name" min-length="1" required />
     <button class="enter" id="enter">Enter Hub</button>
 </div>
 
@@ -66,12 +65,15 @@ const checkListeners = (avatars) => {
 export const addListeners = () => {
   const myInput = document.querySelector("#loginInput");
   const avatarIcon = document.querySelector("#playerAvatar");
+  const alert = document.querySelector("#alert");
   document.querySelector("#enter").addEventListener("click", (event) => {
-    if (myInput.value != "") {
-      localStorage.setItem("user", myInput.value); 
+    if (myInput.value!= "") {
+      localStorage.setItem("user", myInput.value);
       localStorage.setItem("icon", avatarIcon.src);
+    } else {
+      window.alert("Please, enter your name for Login.") 
     }
-   
+  
     initContent();
     const profileBack = document.querySelector("#profileBack");
     profileBack.style.backgroundColor = changeColor();

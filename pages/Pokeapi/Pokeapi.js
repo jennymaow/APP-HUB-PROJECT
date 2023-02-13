@@ -13,6 +13,7 @@ const template = () => `
     <input type="text" id="searchedPokemon" placeholder="  Search Pokemon"/>
     <button class="searchBtn" id="searchBtn"><img src="https://res.cloudinary.com/dnb4ujbgr/image/upload/v1675552618/Pokemons%20icons/brows_browsing_find_search_seo_web_zoom_icon_123196_whqsod.png" alt="search icon"/></button>
     </div>
+    <span class="loader"></span>
     <div id="container" class="container"></div>
 </section>
 `;
@@ -29,6 +30,7 @@ const getPokemons = async () => {
   }
 
   mapPokemons(pokemonsList);
+  document.querySelector(".loader").style.display="none";
 };
 
 const mapPokemons = (pokemons) => {
@@ -77,6 +79,7 @@ const printPokemon = (pokemons) => {
     container.appendChild(figure);
     figure.appendChild(iconsDiv);
   }
+  
 };
 
 const typeColor = (pokemons) => {
@@ -114,7 +117,6 @@ const filterTypePokemon = (pokemons, pokemonType) => {
 };
 
 const addListeners = () => {
- 
   document
     .querySelector("#searchBtn")
     .addEventListener("click", () => filterPokemons(allPokemons));
