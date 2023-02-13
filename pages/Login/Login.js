@@ -71,7 +71,7 @@ export const addListeners = () => {
       localStorage.setItem("user", myInput.value);
       localStorage.setItem("icon", avatarIcon.src);
     } else {
-      window.alert("Please, enter your name for Login.") 
+      window.alert("Please, enter your name.") 
     }
   
     initContent();
