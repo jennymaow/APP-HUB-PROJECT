@@ -16,7 +16,7 @@
   margin: 2rem 0 1rem 0;
 }
 
-.inputlogin > .chooseAvatar{
+.inputlogin > .chooseAvatar {
   display: flex;
   align-items: center;
   gap: 1rem;
@@ -34,9 +34,8 @@
   border: none;
 }
 
-.inputlogin > .chooseAvatar > button > img{
+.inputlogin > .chooseAvatar > button > img {
   width: 50px;
-  
 }
 
 .inputlogin > .chooseAvatar > .avatarContainer {
@@ -45,10 +44,11 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+/*   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px; */
   border-radius: 12px;
+  border: 3px solid black ;
 }
-.inputlogin  .chooseAvatar  .playerAvatar {
+.inputlogin .chooseAvatar .playerAvatar {
   width: 150px;
 }
 
@@ -81,6 +81,12 @@
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   border-radius: 5px;
   border: none;
+  transition: 0.2s all ease-in;
+}
+
+.inputlogin > .enter:hover {
+  background-color: black;
+  color: white;
 }
 
 .inputlogin > .randomAvatar {
@@ -100,14 +106,14 @@
 }
 
 @media screen and (max-width: 576px) {
-  .inputlogin > h1{
+  .inputlogin > h1 {
     font-size: 1.8rem;
   }
-  .inputlogin > .chooseAvatar{
+  .inputlogin > .chooseAvatar {
     width: 300px;
   }
 
-  .inputlogin  .chooseAvatar  .playerAvatar{
+  .inputlogin .chooseAvatar .playerAvatar {
     width: 100px;
   }
 }
